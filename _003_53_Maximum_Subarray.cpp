@@ -11,6 +11,8 @@ int maxSubArray(vector<int>& nums) {
         prefix += nums[i];
         maxSum = max(maxSum, prefix - minPrefix);
         minPrefix = min(minPrefix, prefix);
+
+        cout<<prefix<<" "<<minPrefix<<" "<<maxSum<<endl;
     }
 
     return maxSum;
