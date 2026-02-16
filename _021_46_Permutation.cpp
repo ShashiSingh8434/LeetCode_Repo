@@ -2,9 +2,7 @@
 #include <vector>
 using namespace std;
 
-void backtrack(vector<int>& nums, vector<int>& temp, 
-                vector<vector<int>>& result, vector<bool>& used) {
-    
+void backtrack(vector<int>& nums, vector<int>& temp, vector<vector<int>>& result, vector<bool>& used) {
     if (temp.size() == nums.size()) {
         result.push_back(temp);
         return;
