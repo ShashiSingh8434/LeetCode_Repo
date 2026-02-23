@@ -25,16 +25,19 @@ struct ListNode {
 // Why this works?
 // Because in a cycle, the faster pointer will “lap” the slower one (like in a race track).
 
-ListNode* middleNode(ListNode* head) {
+bool hasCycle(ListNode *head) {
     ListNode* slow = head;
     ListNode* fast = head;
 
-    while (fast != NULL && fast->next != NULL) {
+    while (fast && fast->next) {
         slow = slow->next;
         fast = fast->next->next;
-    }
 
-    return slow;
+        if (slow == fast) {
+            return true;
+        }
+    }
+    return false;
 }
 
 int main(){
