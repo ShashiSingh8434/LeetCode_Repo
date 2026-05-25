@@ -30,5 +30,5 @@ int longestConsecutive(vector<int>& nums) {
 
         count = max(count, temp);
     }
-    return count;
+    return count; 
 }
