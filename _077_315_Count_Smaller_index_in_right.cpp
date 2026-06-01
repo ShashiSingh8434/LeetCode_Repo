@@ -48,6 +48,7 @@ public:
         for (int k = l; k <= r; k++) {
             arr[k] = temp[k - l];
         }
+        
     }
 
     vector<int> countSmaller(vector<int>& nums) {
